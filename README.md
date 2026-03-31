@@ -97,6 +97,8 @@ Every time code is pushed:
 * Docker image is built
 
 This acts as the main CI pipeline.
+<img width="2774" height="1406" alt="image" src="https://github.com/user-attachments/assets/fffa7d70-eb16-4949-9b42-5fae51f9fbc3" />
+
 
 ---
 
@@ -110,8 +112,10 @@ It pulls the latest code from GitHub and:
 * installs dependencies
 * runs lint checks
 * runs tests
+<img width="2790" height="1400" alt="image" src="https://github.com/user-attachments/assets/0d85c59f-6cab-425b-8f98-ac7c464c568f" />
 
 This basically works as a second validation layer to ensure everything builds correctly in a clean environment.
+
 
 ---
 
@@ -128,8 +132,6 @@ This basically works as a second validation layer to ensure everything builds co
 ```
 
 ---
-<img width="2774" height="1406" alt="image" src="https://github.com/user-attachments/assets/fffa7d70-eb16-4949-9b42-5fae51f9fbc3" />
-<img width="2790" height="1400" alt="image" src="https://github.com/user-attachments/assets/0d85c59f-6cab-425b-8f98-ac7c464c568f" />
 
 ## Final thoughts
 
