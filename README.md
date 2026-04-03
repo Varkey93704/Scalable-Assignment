@@ -66,15 +66,12 @@ docker run -p 5000:5000 fitness-app
 
 ## CI/CD
 
-GitHub Actions runs automatically on every push and checks:
+GitHub Actions runs automatically whenever code is pushed to the repository. It installs dependencies, runs lint checks, executes tests, and builds the Docker image.
 
-* lint
-* tests
-* docker build
 <img width="2774" height="1406" alt="image" src="https://github.com/user-attachments/assets/fffa7d70-eb16-4949-9b42-5fae51f9fbc3" />
 
+Jenkins is also connected to the same repository. It pulls the latest code and runs a similar pipeline in a separate environment. This acts as an additional validation step to make sure the build works outside the GitHub environment as well.
 
-Jenkins is also connected to the repo and runs a similar pipeline as a second check.
 <img width="2790" height="1400" alt="image" src="https://github.com/user-attachments/assets/0d85c59f-6cab-425b-8f98-ac7c464c568f" />
 
 
