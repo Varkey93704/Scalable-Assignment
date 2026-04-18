@@ -78,7 +78,7 @@ pipeline {
         stage('Run Tests Inside Container') {
             steps {
                 sh '''
-                docker run --rm $LOCAL_IMAGE python -m pytest
+                docker run --rm $LOCAL_IMAGE pytest tests
                 '''
             }
         }
