@@ -77,6 +77,38 @@ Jenkins is also connected to the same repository. It pulls the latest code and r
 
 ---
 
+## Kubernetes Rolling Update
+
+This project also supports a simple rolling update simulation in Minikube.
+
+Apply the Kubernetes files:
+
+```bash
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+```
+
+To roll from one image version to another, first make sure the new image exists locally and is tagged correctly, then run:
+
+```powershell
+.\rolling-update.ps1 -Version v1.2
+```
+
+This script:
+
+* loads the tagged image into Minikube
+* updates the deployment image
+* waits for rollout completion
+* shows the current pods
+
+You can verify the app after rollout at:
+
+```text
+http://192.168.49.2:30080
+```
+
+---
+
 ## Notes
 
 There were a few issues while setting this up (especially Jenkins and Docker), but fixing them helped me understand how CI/CD works in real scenarios.
