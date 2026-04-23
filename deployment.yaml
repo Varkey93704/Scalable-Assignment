@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scalable-assignment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: scalable-assignment
+  template:
+    metadata:
+      labels:
+        app: scalable-assignment
+    spec:
+      containers:
+        - name: flask-api
+          image: varkey93704/scalable-assignment:v1.1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
