@@ -145,7 +145,8 @@ This keeps both deployments running and changes only the service selector, which
 
 ## Notes
 
-There were a few issues while setting this up (especially Jenkins and Docker), but fixing them helped me understand how CI/CD works in real scenarios.
+There were quite a few issues during setup (especially with Jenkins, Docker, and Kubernetes),
+but solving them helped in understanding how real CI/CD pipelines behave in different environments.
 
 ---
 
