@@ -109,6 +109,40 @@ http://192.168.49.2:30080
 
 ---
 
+## Kubernetes Blue-Green Deployment
+
+This project also includes a simple blue-green deployment simulation for Minikube.
+
+Apply the blue-green files:
+
+```bash
+kubectl apply -f blue-deployment.yaml
+kubectl apply -f green-deployment.yaml
+kubectl apply -f blue-green-service.yaml
+```
+
+The service starts by sending traffic to the blue deployment on:
+
+```text
+http://192.168.49.2:30081
+```
+
+To switch traffic to the green deployment:
+
+```powershell
+.\switch-traffic.ps1 -Color green
+```
+
+To switch traffic back to blue:
+
+```powershell
+.\switch-traffic.ps1 -Color blue
+```
+
+This keeps both deployments running and changes only the service selector, which makes it easy to demonstrate blue-green deployment with minimal complexity.
+
+---
+
 ## Notes
 
 There were a few issues while setting this up (especially Jenkins and Docker), but fixing them helped me understand how CI/CD works in real scenarios.
